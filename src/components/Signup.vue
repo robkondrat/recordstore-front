@@ -39,7 +39,7 @@
       }
     },
     created() {
-      this.checkedSignedIn()
+      this.checkSignedIn()
     },
     updated() {
       this.checkSignedIn()
@@ -65,7 +65,7 @@
         delete localStorage.csrf
         delete localStorage.signedIn
       },
-      checkedSignedin() {
+      checkSignedIn() {
         if (localStorage.signedIn) {
           this.$router.replace('/records')
         }
